@@ -17,9 +17,10 @@
             <version>3.4</version>
         </dependency>
     </dependencies>
+    
     <build>
         <plugins>
-            <!-- 1. Crea el .jar y le dice que las librerías están en lib/ -->
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -35,7 +36,7 @@
                 </configuration>
             </plugin>
             
-            <!-- 2. Copia FlatLaf a la carpeta target/lib/ -->
+ 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
