@@ -26,7 +26,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <!-- Aquí le decimos a Java qué ventana abrir al darle doble clic -->
+
                             <mainClass>agencia.cliente.AgentePrioritarioUI</mainClass>
                         </manifest>
                     </archive>
