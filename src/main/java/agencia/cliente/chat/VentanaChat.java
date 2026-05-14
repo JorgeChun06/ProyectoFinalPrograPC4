@@ -31,7 +31,7 @@ public class VentanaChat extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
 
-        // Interfaz
+
         areaMensajes = new JTextArea();
         areaMensajes.setEditable(false);
         areaMensajes.setLineWrap(true);
