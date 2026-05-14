@@ -59,7 +59,24 @@ public class AgentePrioritarioUI extends JFrame {
         setSize(900, 650); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); 
-        
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                try {
+                    
+                    if (outPrincipal != null) {
+                        outPrincipal.writeObject("DESCONEXION_REAL");
+                        outPrincipal.flush();
+                    }
+                    
+                    if (socketPrincipal != null && !socketPrincipal.isClosed()) {
+                        socketPrincipal.close();
+                    }
+                } catch (Exception ex) {
+                    
+                }
+            }
+        });
         JPanel panelMaestro = new JPanel(new BorderLayout(25, 25));
         panelMaestro.setBackground(COLOR_FONDO);
         panelMaestro.setBorder(new EmptyBorder(25, 35, 25, 35));
